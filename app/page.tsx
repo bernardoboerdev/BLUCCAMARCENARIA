@@ -8,11 +8,9 @@ import { CountUp } from "@/components/count-up"
 import { ScrollAnimation } from "@/components/scroll-animation"
 
 export default function Home() {
-  // Link do WhatsApp atualizado para o novo número
   const whatsappLink =
     "https://wa.me/5511940177290?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20m%C3%B3veis%20planejados"
 
-  // Projetos para a seção de portfólio - Atualizado com as novas imagens
   const portfolioProjects = [
     {
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Cozinha.jpg-N0gPt1kO1NsNUYWvkKkpjetr5ntZuM.jpeg",
@@ -57,7 +55,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen w-full overflow-hidden"
+        className="relative h-[calc(100vh-64px)] w-full"
         id="hero-section"
         style={{
           backgroundImage:
@@ -66,38 +64,35 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <div className="w-full min-h-screen flex items-center justify-start relative z-10 px-4 sm:px-6 md:px-8 lg:px-16">
-          <div className="relative w-full max-w-2xl">
-            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm rounded-none z-[-1] animate-initial zoom"></div>
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div className="relative h-full w-full flex items-center z-10 px-4 sm:px-6 md:px-8 lg:px-16">
+          <div className="max-w-2xl">
+            <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-3 sm:mb-4 md:mb-6 animate-initial from-left">
+              Marcenaria de <span className="text-primary">Móveis Planejados</span> em São Paulo
+            </h1>
 
-            <div className="p-4 sm:p-6 md:p-8">
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-3 sm:mb-4 md:mb-6 animate-initial from-left">
-                Marcenaria de <span className="text-primary">Móveis Planejados</span> em São Paulo
-              </h1>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed mb-3 sm:mb-4 animate-initial from-left delay-100">
+              Está Procurando uma <span className="text-primary">Marcenaria</span> de Confiança? Conheça a B'Lucca
+              Móveis Planejados, especialista em transformar ambientes com móveis sob medida.
+            </p>
 
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed mb-3 sm:mb-4 animate-initial from-left delay-100">
-                Está Procurando uma <span className="text-primary">Marcenaria</span> de Confiança? Conheça a B'Lucca
-                Móveis Planejados, especialista em transformar ambientes com móveis sob medida.
-              </p>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed mb-3 sm:mb-4 md:mb-6 animate-initial from-left delay-200">
+              Com mais de 30 anos de experiência no mercado de móveis planejados, oferecemos projetos que unem design,
+              funcionalidade e qualidade.
+            </p>
 
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed mb-3 sm:mb-4 md:mb-6 animate-initial from-left delay-200">
-                Com mais de 30 anos de experiência no mercado de móveis planejados, oferecemos projetos que unem design,
-                funcionalidade e qualidade.
-              </p>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-8 animate-initial from-left delay-300">
+              Entre em contato agora e faça o orçamento para o seu projeto dos sonhos!
+            </p>
 
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-8 animate-initial from-left delay-300">
-                Entre em contato agora e faça o orçamento para o seu projeto dos sonhos!
-              </p>
-
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary hover:bg-primary/90 text-white rounded-none px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 inline-flex items-center justify-center font-medium transition-colors text-sm sm:text-base animate-initial zoom delay-400"
-              >
-                Fale conosco
-              </a>
-            </div>
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary hover:bg-primary/90 text-white rounded-none px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 inline-flex items-center justify-center font-medium transition-colors text-sm sm:text-base animate-initial zoom delay-400"
+            >
+              Fale conosco
+            </a>
           </div>
         </div>
       </section>
